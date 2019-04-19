@@ -50,9 +50,13 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	height: 240px;
-	border-bottom: 3px solid #77a466;
 	
+	border-bottom: 3px solid #77a466;
+	display: flex;
+	flex-flow: column;
+	height: auto;
+	max-height: 250px;
+	justify-content: center;
 }
 
 header h1 {
@@ -64,22 +68,28 @@ header h1 span {
 	color: #77a466;
 }
 
-header nav {
+header nav,
+header nav ul,
+header nav ul li {
 	display: flex;
+	flex-flow: column;
 	justify-content: center;
+	align-items: center;
 }
+
 header nav ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	
 }
+
 header nav ul li {
 	font-size: 0.875em;
 	font-weight: 700;
-	margin: 0;
-	padding: 5px 0;
 	text-transform: uppercase;
 }
+
 header nav ul li a{
 	text-decoration: none;
 	color:#77a466;
@@ -88,8 +98,16 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-	
+	width: 100%;
+
 }
+
+.bottom-section {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+
 
 .main-image {
 	width: 100%;
@@ -119,16 +137,16 @@ header nav ul li a{
 .section-three {
 	width: 100%;
 	height: auto;
-
+	max-height: 400px;
 	border-top: 1px solid #eee;
 }
 
-.section-one h4 {
+/*.section-one h4 {
 	padding: 10px 0;
-}
+}*/
 
-
-
+.menu li,
+.section-one h4,
 .section-two h4,
 .section-three h4 {
 	padding: 10px 30px;
@@ -139,7 +157,6 @@ header nav ul li a{
 	padding: 0;
 }
 .menu li {
-	padding: 10px 0;
 	color:#77a466;
 }
 
@@ -173,12 +190,43 @@ footer span {
 =========================================================== */
 
 @media all and (min-width: 768px) {
+	
+	/* change sections one, two, and three to be in a row
+	intead of in a column */
+	
+	.bottom-section {
+		flex-flow: row wrap;
+	}
+	
+	
 	.section-two {
 		border-left: 1px solid #eee;
 		border-right: 1px solid #eee;
 	}
+
+
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 30%;
+	}
 }
 
 @media all and (min-width: 1200px) {
+	header,
+	header nav,
+	header nav ul {
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+	}
 
+	header nav ul li {
+		padding: 0 5px;
+	}
+
+	header h1 {
+		border-bottom: 0;
+		flex-grow: 1;
+		justify-content: flex-start;
+	}
 }
