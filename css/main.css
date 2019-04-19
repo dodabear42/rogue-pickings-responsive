@@ -55,8 +55,9 @@ header {
 	display: flex;
 	flex-flow: column;
 	height: auto;
-	max-height: 250px;
 	justify-content: center;
+	max-height: 250px;
+	padding-top: 10px;
 }
 
 header h1 {
@@ -88,6 +89,7 @@ header nav ul li {
 	font-size: 0.875em;
 	font-weight: 700;
 	text-transform: uppercase;
+	padding: 10px 0;
 }
 
 header nav ul li a{
