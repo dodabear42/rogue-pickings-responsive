@@ -16,12 +16,9 @@ body {
 }
 
 .container{
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	flex-flow: column wrap;
-	max-width: 1200px;
+	max-width: 760px;
 	width: 90%;
+
 }
 
 h1,
@@ -47,44 +44,41 @@ h4 {
 
 p {
 	font-size: 0.875em;
-	line-height: 1.3125em;
+	line-height: 21px;
     padding: 0 30px;
 }
 
 /*The widths are in a percentage!*/
 header {
-	height: 220px;
+	height: 240px;
 	border-bottom: 3px solid #77a466;
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: flex-start;
+	
 }
 
 header h1 {
-	margin: 0;
-	padding: 38px 0;
+	border-bottom: 3px solid #77a466;
 	display: flex;
 	justify-content: center;
-
 }
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	
-	padding: 46px 0;
+	display: flex;
+	justify-content: center;
 }
 header nav ul {
+	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 header nav ul li {
-	text-transform: uppercase;
-	font-weight: 700;
 	font-size: 0.875em;
-	padding: 0 10px;
-	display: flex;
+	font-weight: 700;
+	margin: 0;
+	padding: 5px 0;
+	text-transform: uppercase;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -94,8 +88,7 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-	display: flex;
-	justify-content: center;
+	
 }
 
 .main-image {
@@ -108,7 +101,7 @@ header nav ul li a{
 
 .main-title {
 	height: auto;
-	float: left;
+
 }
 .main-title h3 {
 	text-align: left;
@@ -134,10 +127,7 @@ header nav ul li a{
 	padding: 10px 0;
 }
 
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
+
 
 .section-two h4,
 .section-three h4 {
@@ -155,12 +145,12 @@ header nav ul li a{
 
 .reviews {
 	color: #333;
-	font-size: 16px;
+	font-size: 1em;
 	line-height: 21px;
 }
 
 .address {
-	font-size: 16px;
+	font-size: 1em;
 	line-height: 24px;
 }
 
@@ -169,14 +159,13 @@ footer {
 	height: 50px;
 	border-top: 3px solid #eee;
 	margin: 0 auto;
-	clear: both;
 	text-align: center;
 }
 footer span {
 	font-family: 'Wisdom Script', cursive;
 	text-transform: lowercase;
 	color: #77a466;
-	font-size: 14px;
+	font-size: 0.875em;
 }
 
 /* ========================================================
@@ -184,7 +173,10 @@ footer span {
 =========================================================== */
 
 @media all and (min-width: 768px) {
-
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
 }
 
 @media all and (min-width: 1200px) {
