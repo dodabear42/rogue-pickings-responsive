@@ -171,3 +171,15 @@ footer span {
 	color: #77a466;
 	font-size: 14px;
 }
+
+/* ========================================================
+	MOBILE-FIRST RESPONSIVE - LARGER SCREENS BELOW
+=========================================================== */
+
+@media all and (min-width: 768px) {
+
+}
+
+@media all and (min-width: 1200px) {
+
+}
